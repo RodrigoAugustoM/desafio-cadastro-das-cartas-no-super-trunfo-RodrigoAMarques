@@ -9,47 +9,55 @@
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    char p1nome[50];
-    int p1populacao;
-    float p1area;
-    float p1pib;
-    int p1pontosturisticos;
+    char e1sigla[3] = "";
+    char e1cidade[50] = "";
+    int e1populacao = 0;
+    float e1area = 0.0;
+    float e1pib = 0.0;
+    int e1pontosturisticos = 0;
    
-    char p2nome[50];
-    int p2populacao;
-    float p2area;
-    float p2pib;
-    int p2pontosturisticos;
+    char e2sigla[3] = "";
+    char e2cidade[50] = "";
+    int e2populacao = 0;
+    float e2area = 0.0;
+    float e2pib = 0.0;
+    int e2pontosturisticos = 0;
+
+    char siglas[200] = "AC - AL - AP - AM - BA - CE - DF \n ES - GO - MA - MT - MS - MG - PA \n PB - PR - PE - PI - RJ - RN - RS \n RO - RR - SC - SP - SE - TO";
     
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    printf("\nRegistre a primeira carta,\n Qual o nome do Pais?\n");
-    scanf("%s", p1nome);
-    printf("Qual a população do %s?\n", p1nome);
-    scanf("%d", &p1populacao);
-    printf("Qual a area de %s?\n", p1nome);
-    scanf("%f", &p1area);
-    printf("Qual o PIB de %s?\n", p1nome);
-    scanf("%f", &p1pib);
-    printf("Quantos pontos turisticos %s possui?\n", p1nome);
-    scanf("%d", &p1pontosturisticos);
+    printf("\nRegistre a primeira carta,\n Qual o sigla do Estado?\n %s\nDigite aqui:",siglas);
+    scanf("%s", e1sigla);
+    printf("Qual o nome da cidade em %s? \nDigite aqui:",e1sigla);
+    scanf(" %s", e1cidade);
+    printf("Qual a população de %s/%s?\n",e1cidade, e1sigla);
+    scanf("%d", &e1populacao);
+    printf("Qual a area de %s/%s?\n",e1cidade, e1sigla);
+    scanf("%f", &e1area);
+    printf("Qual o PIB de  %s/%s?\n",e1cidade, e1sigla);
+    scanf("%f", &e1pib);
+    printf("Quantos pontos turisticos %s/%s possui?\n", e1cidade, e1sigla);
+    scanf("%d", &e1pontosturisticos);
 
-    printf("\nRegistre a segunda carta,\n Qual o nome do Pais?\n");
-    scanf("%s", p2nome);
-    printf("Qual a população do %s?\n", p2nome);
-    scanf("%d", &p2populacao);
-    printf("Qual a area de %s?\n", p2nome);
-    scanf("%f", &p2area);
-    printf("Qual o PIB de %s?\n", p2nome);
-    scanf("%f", &p2pib);
-    printf("Quantos pontos turisticos %s possui?\n", p2nome);
-    scanf("%d", &p2pontosturisticos);
+    printf("\nRegistre a segunda carta,\n Qual o sigla do Estado?\n %s\nDigite aqui:",siglas);
+    scanf("%s", e2sigla);
+    printf("Qual o nome da cidade em %s? \nDigite aqui:",e2sigla);
+    scanf("%s", e2cidade);
+    printf("Qual a população de %s/%s?\n",e2cidade, e2sigla);
+    scanf("%d", &e2populacao);
+    printf("Qual a area de %s/%s?\n",e2cidade, e2sigla);
+    scanf("%f", &e2area);
+    printf("Qual o PIB de %s/%s?\n",e2cidade, e2sigla);
+    scanf("%f", &e2pib);
+    printf("Quantos pontos turisticos %s/%s possui?\n",e2cidade, e2sigla);
+    scanf("%d", &e2pontosturisticos);
   
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-    printf("%s\nPopulação: %d\nArea: %.2f m²\nPIB:  R$%.2f\nPontos turisticos: %d\n", p1nome, p1populacao, p1area, p1pib, p1pontosturisticos);
-    printf("%s\nPopulação: %d\nArea: %2f m²\nPIB:  R$%.2f\nPontos turisticos: %d\n", p2nome, p2populacao, p2area, p2pib, p2pontosturisticos);
+    printf("%s-%s\nPopulação: %d\nArea: %.2f m²\nPIB:  R$ %.2f\nPontos turisticos: %d\n", e1cidade, e1sigla, e1populacao, e1area, e1pib, e1pontosturisticos);
+    printf("%s-%s\nPopulação: %d\nArea: %.2f m²\nPIB:  R$ %.2f\nPontos turisticos: %d\n", e2cidade, e2sigla, e2populacao, e2area, e2pib, e2pontosturisticos);
     return 0;
 }
