@@ -31,7 +31,8 @@ int main() {
     char qard[30] = "Qual a area de ";
     char qpbd[30] = "Qual o PIB de ";
     char qptd[30] = "Quantos pontos turisticos ";
-    char possui[10] =" possui?";
+    char possui[20] =" possui?";
+    
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
@@ -40,7 +41,6 @@ int main() {
     printf("%s%s? \n%s", qndc, e1sigla, dgaq);
     scanf(" %s", e1cidade);
     printf("%s%s/%s?\n%s",qppd, e1cidade, e1sigla, dgaq);
-
     scanf("%d", &e1populacao);
     printf("%s%s/%s?\n%s",qard,e1cidade, e1sigla, dgaq);
     scanf("%f", &e1area);
@@ -65,7 +65,7 @@ int main() {
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-    printf("\n%s-%s\nPopulação: %d\nArea: %.2f m²\nPIB:  R$ %.2f\nPontos turisticos: %d\n", e1cidade, e1sigla, e1populacao, e1area, e1pib, e1pontosturisticos);
-    printf("\n%s-%s\nPopulação: %d\nArea: %.2f m²\nPIB:  R$ %.2f\nPontos turisticos: %d\n", e2cidade, e2sigla, e2populacao, e2area, e2pib, e2pontosturisticos);
+    printf("\n%s-%s\nPopulação: %d\nArea: %.2f m²\nPIB: R$ %.2f\nPontos turisticos: %d\n", e1cidade, e1sigla, e1populacao, e1area, e1pib, e1pontosturisticos);
+    printf("\n%s-%s\nPopulação: %d\nArea: %.2f m²\nPIB: R$ %.2f\nPontos turisticos: %d\n", e2cidade, e2sigla, e2populacao, e2area, e2pib, e2pontosturisticos);
     return 0;
 }
